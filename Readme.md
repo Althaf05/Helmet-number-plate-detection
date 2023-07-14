@@ -8,30 +8,7 @@ The license plates of the bike will be cropped and saved into two seperate folde
 
 
 ## Installation
- 1. git clone https://github.com/Sriharsha6902/Helmet-detection-and-License-Plate-extraction.git<br/>
+ 1. git clone https://github.com/Althaf05/Helmet-number-plate-detection.git<br/>
  2. pip install -r requirements.txt
  3. train the model using the dataset chosen
  4. integrate it with the GUI
- 
-## TRAIN MODEL 
-python train.py --name NAME_OF_MODEL --batch-size 16 --epochs 300 --cfg ./models/yolov5l.yaml --weights ./yolov5l.pt --data ./PATH_TO_data.yaml/  
-### ARGS
- --img-size :- size of image if all images are same size (improves accuracy)<br/>
- --device :- cuda device, i.e. 0 or 0,1,2,3 or cpu<br/>
- --batch-size : iamges per batch as per gpu and system memory (higher reduce time per epoch)<br/>
- --epochs : training epochs (higher improves accuracy but sometimes overfit)<br/>
- --cfg :- model configuration; can be yolov5s.yaml, yolov5m.yaml, yolov5l.yaml, yolov5x.yaml<br/>
- --weights :- pretrained weights; can be yolov5s.pt, yolov5m.pt, yolov5l.pt, yolov5x.pt<br/>
- --data :- path to data.yaml file  <br/>
- --autoanchor : to automatically resize the image<br/>
-
-## DETECT 
-python detect.py --device 0 --source ./PATH_TO_IMAGES_OR_VIDEO/ --weights ./PATH_TO_TRAINED_MODEL/
-### ARGS 
- 
-  --device :- cuda device, i.e. 0 or 0,1,2,3 or cpu (if detect on gpu generate error then use cpu as argument)<br/>
-  --weights :- path to trained model<br/>
-  --source :- path to images or videos<br/>
-  --img-size :- size of image if all images are same size (improves accuracy)<br/>
-  --conf :- minimum confidence to detect object<br/>
-
